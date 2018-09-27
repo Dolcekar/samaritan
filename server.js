@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const path = require("path");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 const db = require('./config/keys').mondoURI;
@@ -18,8 +18,9 @@ mongoose
   const users = require('./routes/api/users');
   const maps = require('./routes/api/maps');
   const posts = require('./routes/api/posts');
+
 // Define middleware here
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
