@@ -10,6 +10,7 @@ const maps = require('./routes/api/maps');
 const posts = require('./routes/api/posts');
 
 const app = express();
+//*** The middleware had to be defined before loading models due to an error  */
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
