@@ -11,9 +11,8 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">The Samaritan</h1>
                 <p className="lead">
                   {' '}
-                  Have you ever wondered how many people needed help at this precise minute that you could actually help?
-                  Have you ever needed help with something minor and wished someone could have reached out to you?
-                  If either one was you, this is the app for you.
+                  Join The Samaritans network, a place where people want to help one another.
+                  
                   Create a helper profile today, share posts and get help
                   from other helpers.
                 </p>
