@@ -12,12 +12,12 @@ export default () => (
       Create a helper profile today, share posts and get help
       from other helpers.</p>
       <Row>
-        <Col s={6} className='grid'>
-        <a class="amber darken-4 waves-effect waves-light btn-large" href="#">Sign Up </a>
+        <Col s={6} class='grid'>
+        <a className="amber darken-4 waves-effect waves-light btn-large" href="#">Sign Up </a>
         </Col>
       
-        <Col s={6} className='grid'>
-          <a class=" amber darken-4 waves-effect waves-light btn-large" href="#">LogIn </a>
+        <Col s={6} class='grid'>
+          <a className=" amber darken-4 waves-effect waves-light btn-large" href="#">Log in </a>
         </Col>
       </Row>
       </div>
