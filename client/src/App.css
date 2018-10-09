@@ -1,9 +1,7 @@
 img {
   width: 100%;
 }
-.navbar {
-  background-color: rgb(216, 150, 89);
-}
+
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
