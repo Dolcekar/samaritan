@@ -1,6 +1,15 @@
 img {
   width: 100%;
 }
+.navbar, .btn-info, .bg-dark {
+  background-color: rgb(240, 169, 88) !important;
+}
+.main-slogan {
+  color: bisque !important;
+}
+.btn-light {
+  background-color: bisque;
+}
 
 .landing {
   position: relative;
