@@ -17,7 +17,7 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">The Samaritans</h1>
+                <h1 className="main-slogan display-3 mb-4">The Samaritans</h1>
                 <p className="lead">
                   {' '}
                   We all need help, everyday, everywhere. 

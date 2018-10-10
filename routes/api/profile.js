@@ -14,6 +14,7 @@ const Profile = require('../../models/Profile');
 // Load User Model
 const User = require('../../models/User');
 
+
 // @route   GET api/profile/test
 // @desc    Tests profile route
 // @access  Public
@@ -27,11 +28,10 @@ router.get(
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const errors = {};
-console.log(req.user.id)
-    Profile.findById(req.user.id)
+
+    Profile.findOne({ user: req.user.id })
       .populate('user', ['name', 'avatar'])
       .then(profile => {
-        // console.log(profile)
         if (!profile) {
           errors.noprofile = 'There is no profile for this user';
           return res.status(404).json(errors);
@@ -102,13 +102,6 @@ router.get('/user/:user_id', (req, res) => {
       res.status(404).json({ profile: 'There is no profile for this user' })
     );
 });
-
-// @route Get api
-// @desc
-// @access 
-
-
-
 
 // @route   POST api/profile
 // @desc    Create or edit user profile
@@ -235,7 +228,7 @@ router.post(
         description: req.body.description
       };
 
-      // Add to exp array
+      // Add to edu array
       profile.education.unshift(newEdu);
 
       profile.save().then(profile => res.json(profile));
