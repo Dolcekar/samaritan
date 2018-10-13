@@ -20,7 +20,7 @@ const db = require('./config/keys').mongoURI;
 
 //Connect to MongoDB
 mongoose
-  .connect(db)
+  .connect(db, { useNewUrlParser: true })
   .then( ()=> console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
@@ -54,9 +54,9 @@ if (process.env.NODE_ENV === "production") {
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
