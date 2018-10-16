@@ -70,26 +70,26 @@ class AddExperience extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Add Experience</h1>
+              <h1 className="display-4 text-center">I need help with...</h1>
               <p className="lead text-center">
-                Add any job or position that you have had in the past or current
+                Describe how someone can help you...
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Company"
-                  name="company"
-                  value={this.state.company}
+                  placeholder="* Description"
+                  name="description"
+                  value={this.state.description}
                   onChange={this.onChange}
                   error={errors.company}
                 />
-                <TextFieldGroup
+                {/* <TextFieldGroup
                   placeholder="* Job Title"
                   name="title"
                   value={this.state.title}
                   onChange={this.onChange}
                   error={errors.title}
-                />
+                /> */}
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -125,11 +125,11 @@ class AddExperience extends Component {
                     id="current"
                   />
                   <label htmlFor="current" className="form-check-label">
-                    Current Job
+                    I need help ASAP
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="Job Description"
+                  placeholder="Describe the ideal Samaritan"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}

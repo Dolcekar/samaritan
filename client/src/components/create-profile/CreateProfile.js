@@ -14,7 +14,7 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      company: '',
+      description: '',
       website: '',
       location: '',
       status: '',
@@ -44,7 +44,7 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
+      description: this.state.description,
       website: this.state.website,
       location: this.state.location,
       status: this.state.status,
@@ -124,10 +124,11 @@ class CreateProfile extends Component {
     // Select options for status
     const options = [
       { label: '* Select Professional Status', value: 0 },
+      { label: 'Artist', value: 'Artist' },
       { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
+      { label: 'Firefighter/Police Officer', value: 'Junior Developer' },
+      { label: 'Engineer/Logistics Professional', value: 'Senior Developer' },
+      { label: 'Manager/Business/Sales Professional', value: 'Manager' },
       { label: 'Student or Learning', value: 'Student or Learning' },
       { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
       { label: 'Intern', value: 'Intern' },
@@ -163,12 +164,12 @@ class CreateProfile extends Component {
                   info="Give us an idea of where you are at in your career"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
+                  placeholder="Description"
+                  name="description"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Could be your own company or one you work for"
+                  info="Tell the community what type of help you need or how others can help you"
                 />
                 <TextFieldGroup
                   placeholder="Website"

@@ -1,7 +1,7 @@
 img {
   width: 100%;
 }
-.navbar, .btn-info, .bg-dark {
+.navbar, .btn-info, .bg-dark .post .footer {
   background-color: rgb(240, 169, 88) !important;
 }
 .main-slogan {

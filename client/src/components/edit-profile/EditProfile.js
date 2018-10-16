@@ -178,14 +178,25 @@ class CreateProfile extends Component {
     // Select options for status
     const options = [
       { label: '* Select Professional Status', value: 0 },
+      { label: 'Artist', value: 'Senior Developer' },
+      { label: 'Architect', value: 'Architect' },
+      { label: 'Business or Sales Professional', value: 'Business or Sales Professional' },
+      { label: 'Commercial Truck Operator', value: 'Commercial Truck Operator' },
+      { label: 'Doctor', value: 'Doctor' },
       { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
+      { label: 'Farmer', value: 'Farmer' },
+      { label: 'Firefighter', value: 'Firefighter' },
+      { label: 'Financial Professional', value: 'Financial Professional' },
       { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
       { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
+      { label: 'Law Professional', value: 'Lawyer' },
+      { label: 'Manager', value: 'Manager' },
+      { label: 'Medical Professional', value: 'Medical Professional' },
+      { label: 'Parent', value: 'Parent' },
+      { label: 'Photographer', value: 'Photographer' },
+      { label: 'Police Officer', value: 'Police Officer' },
+      { label: 'Student', value: 'Student' },
+
     ];
 
     return (
@@ -200,12 +211,12 @@ class CreateProfile extends Component {
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Profile Handle"
+                  placeholder="* Profile Username"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="Create a unique username for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -247,7 +258,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                    Computer Skills, Gardening, "
                 />
                 <TextFieldGroup
                   placeholder="Github Username"
