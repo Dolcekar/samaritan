@@ -72,31 +72,25 @@ class AddEducation extends Component {
               </Link>
               <h1 className="display-4 text-center">Add Education</h1>
               <p className="lead text-center">
-                Add any school, bootcamp, etc that you have attended
+                Add any school, program, bootcamp, etc that you have attended
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* School"
+                  placeholder="* Program Name"
                   name="school"
                   value={this.state.school}
                   onChange={this.onChange}
                   error={errors.school}
                 />
                 <TextFieldGroup
-                  placeholder="* Degree or Certification"
+                  placeholder="* Achievement/certification earned"
                   name="degree"
                   value={this.state.degree}
                   onChange={this.onChange}
                   error={errors.degree}
                 />
-                <TextFieldGroup
-                  placeholder="* Field of Study"
-                  name="fieldofstudy"
-                  value={this.state.fieldofstudy}
-                  onChange={this.onChange}
-                  error={errors.fieldofstudy}
-                />
+               
                 <h6>From Date</h6>
                 <TextFieldGroup
                   name="from"
