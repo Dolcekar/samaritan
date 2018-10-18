@@ -124,10 +124,11 @@ class CreateProfile extends Component {
     // Select options for status
     const options = [
       { label: '* Select Professional Status', value: 0 },
+      { label: 'Artist', value: 'Artist' },
       { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
+      { label: 'Firefighter/Police Officer', value: 'Junior Developer' },
+      { label: 'Engineer/Logistics Professional', value: 'Senior Developer' },
+      { label: 'Manager/Business/Sales Professional', value: 'Manager' },
       { label: 'Student or Learning', value: 'Student or Learning' },
       { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
       { label: 'Intern', value: 'Intern' },
@@ -151,7 +152,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique username for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -160,15 +161,15 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="Tell us a little bit about your profession"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
+                  placeholder="Help Label"
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Could be your own company or one you work for"
+                  info="Use one or two words that describe the help you need"
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -193,7 +194,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                   Construction work,Computer Skills, Driving, Painting, Writing, etc)"
                 />
                 <TextFieldGroup
                   placeholder="Github Username"

@@ -205,7 +205,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique username for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -214,15 +214,15 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="Tell other Samaritans what skills you have by simply listing your profession"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
+                  placeholder="Help Label"
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Could be your own company or one you work for"
+                  info="Describe help needed in one or two words"
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -247,7 +247,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                    Cooking, Painting, Writing, Computer Skills, Languages, etc)"
                 />
                 <TextFieldGroup
                   placeholder="Github Username"

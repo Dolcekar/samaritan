@@ -34,13 +34,13 @@ class Experience extends Component {
     ));
     return (
       <div>
-        <h4 className="mb-4">Experience Credentials</h4>
+        <h4 className="mb-4">Help Request</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Company</th>
-              <th>Title</th>
-              <th>Years</th>
+              <th>Help Type</th>
+              <th>Continuous or not?</th>
+              <th>Help needed by </th>
               <th />
             </tr>
             {experience}
