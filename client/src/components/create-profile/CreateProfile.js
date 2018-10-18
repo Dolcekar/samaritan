@@ -14,7 +14,7 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      description: '',
+      company: '',
       website: '',
       location: '',
       status: '',
@@ -44,7 +44,7 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      description: this.state.description,
+      company: this.state.company,
       website: this.state.website,
       location: this.state.location,
       status: this.state.status,
@@ -152,7 +152,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique username for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -161,15 +161,15 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="Tell us a little bit about your profession"
                 />
                 <TextFieldGroup
-                  placeholder="Description"
-                  name="description"
+                  placeholder="Help Label"
+                  name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Tell the community what type of help you need or how others can help you"
+                  info="Use one or two words that describe the help you need"
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -194,7 +194,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                   Construction work,Computer Skills, Driving, Painting, Writing, etc)"
                 />
                 <TextFieldGroup
                   placeholder="Github Username"

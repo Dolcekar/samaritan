@@ -34,12 +34,12 @@ class Education extends Component {
     ));
     return (
       <div>
-        <h4 className="mb-4"> Credentials, this creates trustworthiness among Samaritans</h4>
+        <h4 className="mb-4">Credentials</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Achiement</th>
+              <th>School or Program name</th>
+              <th>Achievement</th>
               <th>Years</th>
               <th />
             </tr>

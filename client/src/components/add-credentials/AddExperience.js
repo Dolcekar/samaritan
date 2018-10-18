@@ -70,26 +70,26 @@ class AddExperience extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">I need help with...</h1>
+              <h1 className="display-4 text-center">Add Help Request</h1>
               <p className="lead text-center">
-                Describe how someone can help you...
+                Let other Samaritans know how they can help you
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Description"
-                  name="description"
-                  value={this.state.description}
+                  placeholder="* Help Type"
+                  name="company"
+                  value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
                 />
-                {/* <TextFieldGroup
-                  placeholder="* Job Title"
+                <TextFieldGroup
+                  placeholder="* Continuous help with this issue?"
                   name="title"
                   value={this.state.title}
                   onChange={this.onChange}
                   error={errors.title}
-                /> */}
+                />
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -125,16 +125,16 @@ class AddExperience extends Component {
                     id="current"
                   />
                   <label htmlFor="current" className="form-check-label">
-                    I need help ASAP
+                    ASAP Help Needed
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="Describe the ideal Samaritan"
+                  placeholder="Ideal Samaritan"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the the position"
+                  info="Tell Samaritans what set of skills would best fill in your need"
                 />
                 <input
                   type="submit"

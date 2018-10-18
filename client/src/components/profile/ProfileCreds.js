@@ -11,13 +11,13 @@ class ProfileCreds extends Component {
         <p>
           <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
           {exp.to === null ? (
-            ' Now'
+            ' ASAP'
           ) : (
             <Moment format="YYYY/MM/DD">{exp.to}</Moment>
           )}
         </p>
         <p>
-          <strong>Position:</strong> {exp.title}
+          <strong>Help Type:</strong> {exp.title}
         </p>
         <p>
           {exp.location === '' ? null : (
@@ -48,10 +48,10 @@ class ProfileCreds extends Component {
           )}
         </p>
         <p>
-          <strong>Degree:</strong> {edu.degree}
+          <strong>Achievement:</strong> {edu.degree}
         </p>
         <p>
-          <strong>Field Of Study:</strong> {edu.fieldofstudy}
+          {/* <strong>Field Of Study:</strong> {edu.fieldofstudy} */}
         </p>
         <p>
           {edu.description === '' ? null : (
@@ -65,20 +65,20 @@ class ProfileCreds extends Component {
     return (
       <div className="row">
         <div className="col-md-6">
-          <h3 className="text-center text-info">Experience</h3>
+          <h3 className="text-center text-info">Help Request</h3>
           {expItems.length > 0 ? (
             <ul className="list-group">{expItems}</ul>
           ) : (
-            <p className="text-center">No Experience Listed</p>
+            <p className="text-center">No Help Listed</p>
           )}
         </div>
 
         <div className="col-md-6">
-          <h3 className="text-center text-info">Education</h3>
+          <h3 className="text-center text-info">Credentials</h3>
           {eduItems.length > 0 ? (
             <ul className="list-group">{eduItems}</ul>
           ) : (
-            <p className="text-center">No Education Listed</p>
+            <p className="text-center">No Credentials Listed</p>
           )}
         </div>
       </div>
